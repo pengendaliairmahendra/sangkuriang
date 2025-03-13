@@ -6,47 +6,51 @@
     <title>Kisah Sangkuriang - Legenda Pasundan</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-orange-500 text-white font-sans">
+<body class="bg-orange-500 text-white font-sans" onload="autoPlayVideo()">
     <div class="container mx-auto p-6">
         <h1 class="text-4xl font-bold text-center mb-6">Legenda Sangkuriang dan Asal Usul Gunung Tangkuban Perahu</h1>
-        <div class="w-full">
-            <iframe id="videoPlayer" class="w-full h-96" src="https://www.youtube.com/embed/r0iYqByvnFQ" frameborder="0" allowfullscreen></iframe>
+        <div class="w-full" id="videoContainer">
+            <iframe id="videoPlayer" class="w-full h-96" src="https://www.youtube.com/embed/r0iYqByvnFQ?autoplay=1" frameborder="0" allowfullscreen></iframe>
         </div>
         <div class="mt-6 p-4 bg-white text-orange-700 rounded-lg shadow-lg">
             <h2 class="text-2xl font-semibold">Ringkasan</h2>
+            <small>(Klik Deskripsi untuk lompat ke timeline)</small><br>
             <p class="mt-2">Kisah tragis Sangkuriang dan Dayang Sumbi mengajarkan pentingnya menghormati keluarga, bijak bertindak, dan menerima takdir.</p>
             <div onclick="jumpTo(0)">
-            <h2 class="text-2xl font-semibold mt-4">💫 00:00 - Pengantar Kisah</h2>
-            <p class="mt-2">Kisah Sangkuriang mengisahkan tentang cinta yang tragis dan penuh pelajaran antara Dayang Sumbi dan Sangkuriang di sebuah desa yang indah di Pasundan.</p>
-            <ul class="list-disc pl-6">
-                <li>Deskripsi tentang desa damai yang terletak di tanah subur Pasundan.</li>
-                <li>Pengenalan Tumang sebagai suami Dayang Sumbi.</li>
-            </ul>
+                <h2 class="text-2xl font-semibold mt-4">💫 00:00 - Pengantar Kisah</h2>
+                <p class="mt-2">Kisah Sangkuriang mengisahkan tentang cinta yang tragis dan penuh pelajaran antara Dayang Sumbi dan Sangkuriang di sebuah desa yang indah di Pasundan.</p>
+                <ul class="list-disc pl-6">
+                    <li>Deskripsi tentang desa damai yang terletak di tanah subur Pasundan.</li>
+                    <li>Deskripsi tentang desa damai yang terletak di tanah subur Pasundan, dikelilingi oleh hutan lebat dan gunung yang megah.</li>
+                    <li>Pengantar cerita cinta tragis antara Dayang Sumbi dan Sangkuriang yang terjadi di tengah ketenangan desa.</li>
+                    <li>Pengenalan Tumang sebagai suami Dayang Sumbi, yang merupakan penyelamat dari kutukan Tuhan dan memiliki kemampuan berubah menjadi manusia tampan setiap malam.</li>
+                </ul>
             </div>
             <div onclick="jumpTo(105)">
-            <h2 class="text-2xl font-semibold mt-4">✨ 01:45 - Hubungan Rumit dengan Ibunya</h2>
-            <p class="mt-2">Sangkuriang adalah pemuda tampan dan pemberani yang memiliki hubungan rumit dengan ibunya, Dayang Sumbi.</p>
-            <ul class="list-disc pl-6">
-                <li>Sangkuriang yang suka berburu dan menjelajahi alam.</li>
-                <li>Ketegangan muncul saat ia berencana membunuh anjing peliharaannya, Tumang.</li>
-            </ul>
+                <h2 class="text-2xl font-semibold mt-4">✨ 01:45 - Hubungan Rumit dengan Ibunya</h2>
+                <p class="mt-2">Sangkuriang adalah pemuda tampan dan pemberani yang memiliki hubungan rumit dengan ibunya, Dayang Sumbi.</p>
+                <ul class="list-disc pl-6">
+                    <li>Pengenalan Sangkuriang sebagai pemuda tampan dan pemberani yang suka berburu dan menjelajahi alam.</li>
+                    <li>Ketegangan muncul ketika Sangkuriang berencana untuk membunuh anjing peliharaannya, Tumang, yang membuat ibunya, Dayang Sumbi, sangat marah dan terkejut.</li>
+                    <li>Reaksi emosional Dayang Sumbi yang merasa dunia seolah runtuh setelah mendengar rencana putranya, menunjukkan hubungan yang rumit antara mereka.</li>
+                </ul>
             </div>
             <div onclick="jumpTo(243)">
-            <h2 class="text-2xl font-semibold mt-4" onclick="jumpTo(243)">🌲 04:03 - Perjalanan Emosional</h2>
-            <p class="mt-2">Sangkuriang menghadapi tantangan emosional dan perasaan mendalam terhadap tanah kelahirannya.</p>
-            <ul class="list-disc pl-6">
-                <li>Sangkuriang mengalami penyembuhan dari luka di kepalanya.</li>
-                <li>Dayang Sumbi merasa takut terhadap situasi yang berkembang.</li>
-            </ul>
+                <h2 class="text-2xl font-semibold mt-4">🌲 04:03 - Perjalanan Emosional</h2>
+                <p class="mt-2">Sangkuriang menghadapi tantangan emosional dan perasaan mendalam terhadap tanah kelahirannya.</p>
+                <ul class="list-disc pl-6">
+                    <li>Sangkuriang mengalami penyembuhan dari luka di kepalanya.</li>
+                    <li>Dayang Sumbi merasa takut terhadap situasi yang berkembang.</li>
+                </ul>
             </div>
             <div onclick="jumpTo(325)">
-            <h2 class="text-2xl font-semibold mt-4" onclick="jumpTo(325)">🔥 05:25 - Kemarahan dan Gunung Tangkuban Perahu</h2>
-            <p class="mt-2">Sangkuriang yang marah mengubah perahu menjadi Gunung Tangkuban Perahu.</p>
-            <ul class="list-disc pl-6">
-                <li>Menggambarkan pentingnya hubungan keluarga.</li>
-                <li>Penerimaan terhadap takdir yang telah ditentukan.</li>
-            </ul>
-            </div
+                <h2 class="text-2xl font-semibold mt-4">🔥 05:25 - Kemarahan dan Gunung Tangkuban Perahu</h2>
+                <p class="mt-2">Sangkuriang yang marah mengubah perahu menjadi Gunung Tangkuban Perahu.</p>
+                <ul class="list-disc pl-6">
+                    <li>Menggambarkan pentingnya hubungan keluarga.</li>
+                    <li>Penerimaan terhadap takdir yang telah ditentukan.</li>
+                </ul>
+            </div>
         </div>
     </div>
 
@@ -54,6 +58,12 @@
         function jumpTo(time) {
             let video = document.getElementById("videoPlayer");
             video.src = `https://www.youtube.com/embed/r0iYqByvnFQ?autoplay=1&start=${time}`;
+            document.getElementById("videoContainer").scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function autoPlayVideo() {
+            let video = document.getElementById("videoPlayer");
+            video.src = "https://www.youtube.com/embed/r0iYqByvnFQ?autoplay=1";
         }
     </script>
 </body>
