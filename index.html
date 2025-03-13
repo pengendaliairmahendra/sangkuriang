@@ -3,25 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Legenda Sangkuriang - Perjalanan Cinta Tragis</title>
+    <title>Kisah Sangkuriang - Legenda Pasundan</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-orange-500 text-white">
-    <div class="container mx-auto py-10 text-center">
-        <h1 class="text-4xl font-bold mb-6">Legenda Sangkuriang dan Gunung Tangkuban Perahu</h1>
-        <div class="relative mx-auto w-3/4">
-            <iframe id="video" width="100%" height="500" class="rounded-lg shadow-lg" src="https://www.youtube.com/embed/r0iYqByvnFQ?autoplay=1" frameborder="0" allowfullscreen></iframe>
+<body class="bg-orange-500 text-white font-sans">
+    <div class="container mx-auto p-6">
+        <h1 class="text-4xl font-bold text-center mb-6">Legenda Sangkuriang dan Asal Usul Gunung Tangkuban Perahu</h1>
+        <div class="w-full">
+            <iframe id="videoPlayer" class="w-full h-96" src="https://www.youtube.com/embed/r0iYqByvnFQ" frameborder="0" allowfullscreen></iframe>
         </div>
-        <div class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-            <button onclick="jumpTo(0)" class="bg-white text-orange-500 px-4 py-2 rounded-lg shadow-lg hover:bg-gray-200">🌄 Awal Cerita (00:00)</button>
-            <button onclick="jumpTo(105)" class="bg-white text-orange-500 px-4 py-2 rounded-lg shadow-lg hover:bg-gray-200">🏹 Sangkuriang dan Ibunya (01:45)</button>
-            <button onclick="jumpTo(243)" class="bg-white text-orange-500 px-4 py-2 rounded-lg shadow-lg hover:bg-gray-200">💔 Perjalanan Emosional (04:03)</button>
-            <button onclick="jumpTo(325)" class="bg-white text-orange-500 px-4 py-2 rounded-lg shadow-lg hover:bg-gray-200">⛰️ Terbentuknya Gunung Tangkuban Perahu (05:25)</button>
+        <div class="mt-6 p-4 bg-white text-orange-700 rounded-lg shadow-lg">
+            <h2 class="text-2xl font-semibold">Ringkasan</h2>
+            <p class="mt-2">Kisah tragis Sangkuriang dan Dayang Sumbi mengajarkan pentingnya menghormati keluarga, bijak bertindak, dan menerima takdir.</p>
+            <div onclick="jumpTo(0)">
+            <h2 class="text-2xl font-semibold mt-4">💫 00:00 - Pengantar Kisah</h2>
+            <p class="mt-2">Kisah Sangkuriang mengisahkan tentang cinta yang tragis dan penuh pelajaran antara Dayang Sumbi dan Sangkuriang di sebuah desa yang indah di Pasundan.</p>
+            <ul class="list-disc pl-6">
+                <li>Deskripsi tentang desa damai yang terletak di tanah subur Pasundan.</li>
+                <li>Pengenalan Tumang sebagai suami Dayang Sumbi.</li>
+            </ul>
+            </div>
+            <div onclick="jumpTo(105)">
+            <h2 class="text-2xl font-semibold mt-4">✨ 01:45 - Hubungan Rumit dengan Ibunya</h2>
+            <p class="mt-2">Sangkuriang adalah pemuda tampan dan pemberani yang memiliki hubungan rumit dengan ibunya, Dayang Sumbi.</p>
+            <ul class="list-disc pl-6">
+                <li>Sangkuriang yang suka berburu dan menjelajahi alam.</li>
+                <li>Ketegangan muncul saat ia berencana membunuh anjing peliharaannya, Tumang.</li>
+            </ul>
+            </div>
+            <div onclick="jumpTo(243)">
+            <h2 class="text-2xl font-semibold mt-4" onclick="jumpTo(243)">🌲 04:03 - Perjalanan Emosional</h2>
+            <p class="mt-2">Sangkuriang menghadapi tantangan emosional dan perasaan mendalam terhadap tanah kelahirannya.</p>
+            <ul class="list-disc pl-6">
+                <li>Sangkuriang mengalami penyembuhan dari luka di kepalanya.</li>
+                <li>Dayang Sumbi merasa takut terhadap situasi yang berkembang.</li>
+            </ul>
+            </div>
+            <div onclick="jumpTo(325)">
+            <h2 class="text-2xl font-semibold mt-4" onclick="jumpTo(325)">🔥 05:25 - Kemarahan dan Gunung Tangkuban Perahu</h2>
+            <p class="mt-2">Sangkuriang yang marah mengubah perahu menjadi Gunung Tangkuban Perahu.</p>
+            <ul class="list-disc pl-6">
+                <li>Menggambarkan pentingnya hubungan keluarga.</li>
+                <li>Penerimaan terhadap takdir yang telah ditentukan.</li>
+            </ul>
+            </div
         </div>
     </div>
+
     <script>
         function jumpTo(time) {
-            document.getElementById('video').src = `https://www.youtube.com/embed/r0iYqByvnFQ?autoplay=1&start=${time}`;
+            let video = document.getElementById("videoPlayer");
+            video.src = `https://www.youtube.com/embed/r0iYqByvnFQ?autoplay=1&start=${time}`;
         }
     </script>
 </body>
